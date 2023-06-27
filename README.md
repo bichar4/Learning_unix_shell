@@ -52,3 +52,22 @@ Here, the file111.txt is stored as `project/folder1/subfolder1/file111.txt`
 | **cd ..**   | Go to one level directory up    |
 
 **Tab Completion**: Usually, if you are typing a long file name, pressing tab will suggest/autocomplete the available directory/files which you can use as shortcut.
+
+**Working With Files and Directories**
+
+| Command and options     | Usecase |
+| ----------- | ----------- |
+| **mkdir thesis**   | Create a new directory called thesis in current working directoty     |
+| **mkdir -p projects/data**   | Create a new directory called projects and subdirectory called data in current working directory     |
+| **touch test.txt**   | Create a new file called test.txt in current working directory     |
+| **nano test.txt**   | Opens up nano text editor with default name as test.txt for saving content      |
+| **rm test.txt**   | deletes the file test.txt      |
+| **rm i -test.txt**   | ask for confirmation before delete     |
+| **rm -r testdir**   | If directory, use -r option      |
+| **mv test/a.txt test/b.txt**   | move the file test/a.txt and name it test/b.txt giving effect of renaming   |
+| **mv test/a.txt test/b.txt ./prod**   | move the file test/a.txt and  test/b.txt to the folder prod   |
+| **cp test/a.txt b.txt**   | copies the file test/a.txt names it to b.txt in the current working directory  |
+| **cp -r test test_backup**   | copies the directory test and names it to test-backup in the current working directory  |
+**Wildcards** : Use `*` which represents zero or more characters. For example , Using *.jpg will select all the jpg files. `?` is the wildcard that is place holder for exactly one character.
+
+
