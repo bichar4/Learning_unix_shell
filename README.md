@@ -129,3 +129,35 @@ done
 - Pass the argument after the `bash filename.sh arg1 arg2 arg3` which can be accessed in the script using the special variables `"$1" "$2" "$3"`    
 - Use `$@` sign to get all the command line arguments
 - Use `#` sign as a comment 
+
+**Finding Things**
+- `grep` finds and prints lines in files that match a pattern
+```
+grep --options <word to search> <files to search on>
+```
+Example:
+```
+grep -w -n "The Tao" haiku.txt 
+```
+- To search on directories, use -r options 
+- Use -E option to extend regular expressions
+
+- Use `find` command to find the files
+```
+find <directory to search> <options>
+```
+Examples:
+```
+#find all the directories in current directory 
+find . -type d 
+
+#find all the files in current directory 
+find . -type f 
+
+#find all the .txt extension file 
+find . -name "*.txt"
+
+#perform line count in all the files with extension .txt
+wc -l $(find . -name "*.txt")
+```
+- Shell executes whatever command is executed inside `$([command])`
