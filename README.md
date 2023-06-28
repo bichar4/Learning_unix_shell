@@ -68,6 +68,30 @@ Here, the file111.txt is stored as `project/folder1/subfolder1/file111.txt`
 | **mv test/a.txt test/b.txt ./prod**   | move the file test/a.txt and  test/b.txt to the folder prod   |
 | **cp test/a.txt b.txt**   | copies the file test/a.txt names it to b.txt in the current working directory  |
 | **cp -r test test_backup**   | copies the directory test and names it to test-backup in the current working directory  |
-**Wildcards** : Use `*` which represents zero or more characters. For example , Using *.jpg will select all the jpg files. `?` is the wildcard that is place holder for exactly one character.
+**Wildcards** : Use `*` which represents zero or more characters. For example , Using *.jpg will select all the jpg files. `?` is the wildcard that is place holder for exactly one character.`[xyz]` matches any charecter within x,y,z on one character.
+
+
+**Pipes and Filter**
+
+A filter is a program that transforms a stream of input inro a stream of output. A pipe, `|` between two command provides output of the command on the left as the input to the command on the right.
+| Command and options     | Usecase |
+| ----------- | ----------- |
+| **wc cubane.pdb**   | returns counts on no.of lines, words and characters from left to right |
+| **wc \*.pdb**   | returns counts on no.of lines, words and characters on all the .pdb files|
+| **wc -l \*.pdb**   | returns counts on no.of lines only |
+| **wc \*.pdb > data.txt**   | saves the output to data.txt instead of displaying in terminal <br />  Files get overwritten if the number already presents|
+| **cat data.txt**   | dumps all the content of data.txt on terminal|
+| **less data.txt**   | displays only screenful content and stops|
+| **sort numbers.txt**   | Sorts the content in numbers.txt in alphabetical order|
+| **sort -n numbers.txt**   | Sorts the content in numbers.txt in numerical order|
+| **head -n 3 data.txt**   | Display first 3 rows on data.txt|
+| **echo hello > testfile01.txt**   |writes hello in testfile01.txt <br/> it replaces the content when called again|
+| **echo hello >> testfile01.txt**   |writes hello in testfile01.txt <br/> it appends the content when called again|
+| **tail -n 2 animals.csv**   | Display last  2 rows on data.txt|
+| **sort -n data.txt \| head -n 1**   |Feeds the output of sort as input to head command|
+| **cut -d , -f 2 animals.csv**   |cut the content in animals.csv by delimeter , and extract the second column|
+| **uniq filename**   | filters out adjacent matching line in the file|
+| **uniq -c filename**   | counts the number of adjacent matching line |
+
 
 
