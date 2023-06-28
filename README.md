@@ -108,7 +108,7 @@ do
 done  
 ```
 
-Example of conduction while loop: 
+Example of performing while loop: 
 ```
 a=0
 
@@ -123,3 +123,9 @@ do
 done
 ```
 
+**Shell Scripting**
+
+- Save the command in a file with .sh extension and run the command using `bash filename.sh`
+- Pass the argument after the `bash filename.sh arg1 arg2 arg3` which can be accessed in the script using the special variables `"$1" "$2" "$3"`    
+- Use `$@` sign to get all the command line arguments
+- Use `#` sign as a comment 
