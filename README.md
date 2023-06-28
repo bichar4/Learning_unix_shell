@@ -93,5 +93,33 @@ A filter is a program that transforms a stream of input inro a stream of output.
 | **uniq filename**   | filters out adjacent matching line in the file|
 | **uniq -c filename**   | counts the number of adjacent matching line |
 
+**Loops**
 
+General syntax for for loop
+```
+# The word "for" indicated the start of a "For-loop" command
+for thing in list_of_things 
+#The word "do" indicates the start of job execution list
+do 
+    # Indentation within the loop is not required, but aids legibility
+    #access the variable 'thing' using $thing or ${thing}
+    operation_using/command $thing 
+# The word "done" indicates the end of a loop
+done  
+```
+
+Example of conduction while loop: 
+```
+a=0
+
+while [ $a -lt 10 ]
+do
+   echo $a
+   if [ $a -eq 5 ]
+   then
+      break
+   fi
+   a=`expr $a + 1`
+done
+```
 
